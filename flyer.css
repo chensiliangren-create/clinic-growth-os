@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #f5f5f5;
+  font-family: "MS Gothic", "Yu Gothic", "Hiragino Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ===== A4 FLYER ===== */
+.flyer {
+  /* A4サイズ 210mm × 297mm */
+  width: 210mm;
+  height: 297mm;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+.flyer-header {
+  background: #22893b;
+  color: #fff;
+  padding: 10mm 15mm;
+  text-align: center;
+  border-bottom: 3px solid #27ae60;
+}
+
+.flyer-subtitle {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ===== MAIN CONTENT ===== */
+.flyer-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 12mm 15mm;
+  background: #fafafa;
+}
+
+/* Problems Section */
+.problems-section {
+  text-align: center;
+  margin-bottom: 10mm;
+}
+
+.problems-section h2 {
+  color: #22893b;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6mm;
+  border-bottom: 2px solid #22893b;
+  padding-bottom: 4mm;
+}
+
+.problems-list {
+  background: #e8f5e9;
+  padding: 5mm 6mm;
+  border-radius: 3px;
+  border-left: 3px solid #22893b;
+}
+
+.problems-list p {
+  font-size: 11px;
+  color: #333;
+  line-height: 1.8;
+  margin: 2mm 0;
+}
+
+/* Main Message */
+.main-message {
+  text-align: center;
+  margin: 8mm 0;
+  padding: 8mm;
+  background: #fff;
+  border: 2px solid #22893b;
+  border-radius: 4px;
+}
+
+.main-message h1 {
+  color: #22893b;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 4mm;
+}
+
+.tagline {
+  color: #666;
+  font-size: 11px;
+  margin: 0;
+}
+
+/* What We Do */
+.what-we-do {
+  margin: 8mm 0;
+  background: #fff;
+  padding: 6mm;
+  border-radius: 3px;
+  border-left: 3px solid #27ae60;
+}
+
+.what-we-do h3 {
+  color: #22893b;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 4mm;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 3mm;
+}
+
+.what-we-do ul {
+  list-style: none;
+  margin-bottom: 4mm;
+}
+
+.what-we-do li {
+  font-size: 10px;
+  color: #333;
+  line-height: 1.6;
+  margin: 2mm 0;
+}
+
+.emphasis {
+  font-size: 10px;
+  color: #22893b;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+/* Contact Section */
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6mm;
+  margin: 10mm 0;
+  flex-grow: 1;
+}
+
+.qr-box, .email-box {
+  background: #fff;
+  padding: 6mm;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.qr-box {
+  border: 2px solid #22893b;
+}
+
+.qr-label,
+.email-label {
+  font-size: 10px;
+  color: #22893b;
+  font-weight: 700;
+  margin-bottom: 3mm;
+  margin: 0 0 3mm 0;
+}
+
+.qr-placeholder {
+  width: 50mm;
+  height: 50mm;
+  background: #f0f0f0;
+  border: 1px dashed #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  color: #999;
+  border-radius: 2px;
+}
+
+.email-address {
+  font-size: 13px;
+  color: #22893b;
+  font-weight: 700;
+  margin: 0;
+  word-break: break-all;
+}
+
+/* Footer */
+.flyer-footer {
+  text-align: center;
+  padding-top: 6mm;
+  border-top: 1px solid #e0e0e0;
+  flex-shrink: 0;
+}
+
+.company-name {
+  font-size: 14px;
+  color: #22893b;
+  font-weight: 700;
+  margin-bottom: 2mm;
+  margin: 0 0 2mm 0;
+}
+
+.company-desc {
+  font-size: 9px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  body {
+    background: none;
+    padding: 0;
+  }
+
+  .flyer {
+    width: 210mm;
+    height: 297mm;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* ===== RESPONSIVE FOR SCREEN PREVIEW ===== */
+@media (max-width: 800px) {
+  .flyer {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 210 / 297;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  .flyer-header {
+    padding: 8mm 10mm;
+  }
+
+  .flyer-main {
+    padding: 8mm 10mm;
+  }
+
+  .main-message h1 {
+    font-size: 14px;
+  }
+
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+
+  .qr-placeholder {
+    width: 40mm;
+    height: 40mm;
+  }
+}
